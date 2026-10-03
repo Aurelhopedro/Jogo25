@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<meta name="theme-color" content="#14161d" />
-<title>FABLEDEVIL — a clean little rage game</title>
+<meta name="theme-color" content="#0a0c12" />
+<title>PuzzlePlatformer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -25,10 +25,10 @@
   <div id="hud" class="hidden">
     <div class="hud-left">
       <span id="hud-levelnum" class="pill">1</span>
-      <span id="hud-levelname">NOTHING TO SEE HERE</span>
+      <span id="hud-levelname">—</span>
     </div>
     <div class="hud-right">
-      <span class="skull">&#9760;</span><span id="hud-deaths">0</span>
+      <span class="skull-icon">✕</span><span id="hud-deaths">0</span>
       <span class="hint">R&nbsp;restart</span>
     </div>
   </div>
@@ -36,30 +36,25 @@
   <!-- MENU -->
   <div id="menu">
     <div class="menu-inner">
-      <div class="devil-face">
-        <div class="horn left"></div>
-        <div class="horn right"></div>
-        <div class="face">
-          <div class="eye l"></div>
-          <div class="eye r"></div>
-          <div class="grin"></div>
-        </div>
+      <div class="logo-mark">
+        <div class="logo-shape"></div>
+        <div class="logo-dot"></div>
       </div>
-      <h1 class="title"><span class="t-fable">FABLE</span><span class="t-devil">DEVIL</span></h1>
-      <p class="subtitle">a clean little rage game. promise. <span class="wink">;)</span></p>
+      <h1 class="title"><span class="t-main">PUZZLE</span><span class="t-accent">PLATFORMER</span></h1>
+      <p class="subtitle">every trap is perfectly planned &nbsp;·&nbsp; promise.</p>
       <button id="play-btn">PLAY</button>
       <div class="grid-label">levels</div>
       <div id="level-grid"></div>
-      <p class="menu-deaths">total deaths: <span id="menu-deaths">0</span></p>
-      <p class="controls-hint">&larr; &rarr; / A D move &nbsp;&middot;&nbsp; &uarr; / W / SPACE jump &nbsp;&middot;&nbsp; T theme</p>
+      <p class="menu-deaths">deaths: <span id="menu-deaths">0</span></p>
+      <p class="controls-hint">&larr; &rarr; / A D &nbsp;move &nbsp;&nbsp;·&nbsp;&nbsp; &uarr; / W / SPACE &nbsp;jump &nbsp;&nbsp;·&nbsp;&nbsp; T &nbsp;theme</p>
     </div>
   </div>
 
   <!-- END SCREEN -->
   <div id="end-screen" class="hidden">
     <div class="menu-inner">
-      <h1 class="end-title">YOU BEAT<br>THE DEVIL</h1>
-      <p class="end-sub">...this time.</p>
+      <h1 class="end-title">YOU MADE<br>IT OUT.</h1>
+      <p class="end-sub">against all odds.</p>
       <p class="end-stats">you died <span id="end-deaths">0</span> times. <span id="end-roast"></span></p>
       <button id="end-menu-btn">BACK TO MENU</button>
     </div>
